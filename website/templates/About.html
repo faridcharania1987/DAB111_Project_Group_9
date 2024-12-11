@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Data Insights</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navbar Section */
+        .navbar {
+            background-color: #2c3e50;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar-brand:hover {
+            color: #3498db;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #3498db;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px;
+            color: white;
+            background: linear-gradient(90deg, #42a5f5, #ab47bc);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        /* Project Information Section */
+        .project-info {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-info h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+
+        .project-info ul {
+            margin-top: 10px;
+        }
+
+        .project-info li {
+            margin-bottom: 10px;
+        }
+
+        /* Section Icons */
+        .section-icon {
+            margin-right: 10px;
+            color: white;
+            background: linear-gradient(90deg, #42a5f5, #ab47bc);
+            border-radius: 50%;
+            padding: 15px;
+            transition: all 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .section-icon:hover {
+            background: linear-gradient(90deg, #f6d365, #fda085);
+            color: #e74c3c; /* Change color on hover */
+        }
+
+        .section-icon i {
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('data') }}"><i class="fas fa-database"></i> Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('details') }}"><i class="fas fa-users"></i> Details</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header Section -->
+    <header id="about">
+        <h1>Background of Retail Dataset</h1>
+        <p>Understanding Customer Behavior Through Retail Data</p>
+    </header>
+
+    <!-- Dataset Details Section -->
+    <section>
+        <h2 class="section-title"><i class="section-icon fas fa-database"></i> Dataset Overview</h2>
+        <p>The <strong>Online Retail Dataset</strong> is a real-world dataset containing transactional data for a UK-based online retailer. It includes all transactions that occurred between **01/12/2010 and 09/12/2011**. The dataset is widely used for retail analytics, data science, and machine learning tasks due to its rich set of attributes and real-world applicability.</p>
+    </section>
+
+    <!-- Key Features Section -->
+    <section>
+        <h2 class="section-title"><i class="section-icon fas fa-clipboard-list"></i> Key Features of the Dataset</h2>
+        <ul>
+            <li><strong>Transactions:</strong> Includes data about online transactions.</li>
+            <li><strong>Time Period:</strong> Covers transactions from December 2010 to December 2011.</li>
+            <li><strong>Focus:</strong> Primarily UK-based customers with some international transactions.</li>
+            <li><strong>Products:</strong> Over 4,000 unique products sold by the retailer.</li>
+            <li><strong>Customers:</strong> Over 100,000 customers from various countries.</li>
+        </ul>
+    </section>
+
+    <!-- Attribute Details Section -->
+    <section>
+        <h2 class="section-title"><i class="section-icon fas fa-info-circle"></i> Attribute Details</h2>
+        <ul>
+            <li><strong>InvoiceNo:</strong> A 6-digit unique identifier for each transaction (Invoice).</li>
+            <li><strong>StockCode:</strong> Unique identifier for each product/item.</li>
+            <li><strong>Description:</strong> Describes the product (e.g., "WHITE HANGING HEART T-LIGHT HOLDER").</li>
+            <li><strong>Quantity:</strong> Number of units purchased per transaction.</li>
+            <li><strong>InvoiceDate:</strong> The date and time of the transaction.</li>
+            <li><strong>UnitPrice:</strong> Price per unit in GBP.</li>
+            <li><strong>CustomerID:</strong> A unique customer identifier.</li>
+            <li><strong>Country:</strong> Country of the customer.</li>
+        </ul>
+    </section>
+
+    <!-- Applications Section -->
+    <section>
+        <h2 class="section-title"><i class="section-icon fas fa-chart-line"></i> Applications of the Dataset</h2>
+        <p>This dataset can be leveraged for a variety of purposes:</p>
+        <ul>
+            <li><strong>Customer Segmentation:</strong> Group customers based on their purchasing behavior.</li>
+            <li><strong>Sales Analysis:</strong> Identify trends in product performance and optimize stock levels.</li>
+            <li><strong>Market Basket Analysis:</strong> Understand which products are often purchased together.</li>
+            <li><strong>Churn Analysis:</strong> Identify customers who may stop purchasing and design retention strategies.</li>
+            <li><strong>Product Demand Forecasting:</strong> Use transaction data to forecast demand for specific products.</li>
+        </ul>
+    </section>
+
+    <!-- How the Dataset Can Be Useful -->
+    <section>
+        <h2 class="section-title"><i class="section-icon fas fa-lightbulb"></i> How the Dataset Can Be Useful</h2>
+        <p>The Online Retail Dataset can provide valuable insights for businesses looking to optimize various aspects of their operations:</p>
+        <ul>
+            <li><strong>Enhanced Marketing Strategies:</strong> With customer segmentation, businesses can tailor marketing efforts to the most valuable customer groups.</li>
+            <li><strong>Improved Inventory Management:</strong> Through sales forecasting and demand prediction, retailers can reduce both stockouts and overstocking, ensuring that popular products are always available.</li>
+            <li><strong>Better Product Bundling:</strong> Market basket analysis allows retailers to bundle complementary products together, boosting sales and improving customer satisfaction.</li>
+            <li><strong>Churn Reduction:</strong> By identifying customers at risk of churning, businesses can proactively implement retention strategies.</li>
+            <li><strong>Optimization of Sales Operations:</strong> The dataset can inform decisions on product promotions, seasonal pricing, and optimal stock levels, leading to more efficient sales operations.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Retail Data Insights. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
